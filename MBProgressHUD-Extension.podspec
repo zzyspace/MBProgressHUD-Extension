@@ -9,4 +9,5 @@ Pod::Spec.new do |s|
   s.platform = :ios, '8.0'
   s.frameworks = 'Foundation'
   s.dependency 'MBProgressHUD', '~> 1.0.0'
+  s.source_files = '*.{h,m}'
 end
