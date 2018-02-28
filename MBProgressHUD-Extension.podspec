@@ -8,4 +8,5 @@ Pod::Spec.new do |s|
   s.authors = { 'Ryan' => '551854173@qq.com' }
   s.platform = :ios, '8.0'
   s.frameworks = 'MBProgressHUD'
+  s.source_files = '*.{h,m}'
 end
