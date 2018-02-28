@@ -9,8 +9,6 @@ Pod::Spec.new do |s|
   s.platform = :ios, '8.0'
   s.frameworks = 'Foundation'
   s.dependency 'MBProgressHUD'
-  s.source_files = 'MBProgressHUD-Extension/*'
-  s.resource_bundles = {
-    'MyPodBundle' => ['Pod/Classes/**/*.xib']
-  }
+  s.source_files = '*.{h,m}'
+  s.resource = 'MBProgressHUD-Extension.bundle'
 end
