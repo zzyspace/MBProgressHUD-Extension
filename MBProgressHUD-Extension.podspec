@@ -7,5 +7,6 @@ Pod::Spec.new do |s|
   s.source   = { :git => 'git@github.com:zzyspace/MBProgressHUD-Extension.git', :tag => "#{s.version}" }
   s.authors = { 'Ryan' => '551854173@qq.com' }
   s.platform = :ios, '8.0'
-  s.frameworks = 'MBProgressHUD'
+  s.frameworks = 'Foundation'
+  s.dependency 'MBProgressHUD', '~> 1.0.0'
 end

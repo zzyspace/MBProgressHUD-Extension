@@ -52,7 +52,7 @@
            duration:(NSTimeInterval)duration
          completion:(void (^)(void))completion
 {
-    [self show:message icon:@"hud_success.png" view:view duration:duration];
+    [self show:message icon:[UIImage imageNamed:@"MBProgressHUD-Extension.bundle/hud_success.png"] view:view duration:duration];
     if (completion) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             completion();
@@ -77,7 +77,7 @@
          duration:(NSTimeInterval)duration
        completion:(void (^)(void))completion
 {
-    [self show:message icon:@"hud_error.png" view:view duration:duration];
+    [self show:message icon:[UIImage imageNamed:@"MBProgressHUD-Extension.bundle/hud_error.png"] view:view duration:duration];
     if (completion) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             completion();
@@ -100,7 +100,7 @@
 
 #pragma mark - Common
 
-+ (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view duration:(NSTimeInterval)duration
++ (void)show:(NSString *)text icon:(UIImage *)icon view:(UIView *)view duration:(NSTimeInterval)duration
 {
     if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
     
@@ -111,11 +111,7 @@
     hud.label.numberOfLines = 0;
     
     // 设置图片
-    UIImage *image = nil;
-    if (icon) {
-        image = [UIImage imageNamed:icon];
-    }
-    hud.customView = [[UIImageView alloc] initWithImage:image];
+    hud.customView = [[UIImageView alloc] initWithImage:icon];
     
     // 设置模式
     hud.mode = MBProgressHUDModeCustomView;
