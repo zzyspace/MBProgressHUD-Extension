@@ -4,7 +4,7 @@
 //  Created by Ryan on 15/8/11.
 //
 
-#import "MBProgressHUD.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 /**
  *  MBProgressHUD 封装分类
